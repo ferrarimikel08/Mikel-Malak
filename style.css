@@ -45,3 +45,32 @@ body{background: whitesmoke ;}
 
 .button{padding: 15px 20px; display: inline-block; color: white; width: 100%; text-align: center; transition: 0.3; border-radius: 6px; margin-top: 20px}
 .button:hover{background: #ffd369; color: #1e2a38; opacity: 0.85;}
+
+.tag{display:flex; align-items: center; justify-content:space-around; gap:8px; padding:4px 12px; flex-wrap: wrap;}
+.tag__button{display: inline-block; max-width: 180px; font-size: 12px; font-weight: 600;border-radius: 20px; padding: 5px 12px; text-align:center;}
+
+.box{display:flex; justify-content:center;align-items: center; width: 100%;  padding: 20px 20%;background: radial-gradient(white, rgb(186, 216, 247));}
+.box__txt{text-align: center;padding: 0 20px; color:#1e2a38;}
+
+
+
+.tag__button--azzuro { background: #dbeafe; color: #1e40af; }
+.tag__button--marrone   { background: #f3e8ff; color:#97663b; }
+.tag__button--verde  { background: #f3f4f6; color:#5b7540; width: auto; }
+.text--blu{color: #32587e; }
+.text--marrone{color: #97663b; }
+.text--verde{color: #5b7540; }
+.button--blu{background:#32587e;}
+.button--marrone{background:#97663b;}
+.button--verde{background: #5b7540;}
+
+@media (max-width: 768px){
+    .header{padding-left: 20px; padding-right: 60px; position:relative}
+    .menu{display: block; position: absolute;top: 108px; left: -100%; width: 100%;}  /*video su marchetti su come si fanno i 3 linette e appare il menu*/
+    .nav__item{width: 100%}
+    .hero{flex-wrap: wrap;}
+    .hero__title,.hero__subtitle,.hero__text, .section-title{width: 100%}
+    .grid__column, .card, .box{width: 100%}
+    .box{flex-wrap: wrap;}
+    
+}
