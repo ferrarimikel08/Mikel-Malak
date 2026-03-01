@@ -72,5 +72,4 @@ body{background: whitesmoke ;}
     .hero__title,.hero__subtitle,.hero__text, .section-title{width: 100%}
     .grid__column, .card, .box{width: 100%}
     .box{flex-wrap: wrap;}
-    
 }
