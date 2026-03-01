@@ -28,3 +28,20 @@ body{background: whitesmoke ;}
 .hero__title:hover::after{width: 30%;}
 .hero__subtitle{ font-weight: 400; color: #555; padding: 0; margin: 0; }
 .hero__text{margin-top: 30px; padding: 0 20%;}
+
+.section-title{display: flex;justify-content: center;align-items: center;text-align: center;font-weight: 600; color: #32587e; padding: 0; margin: 0;}
+.section-title::before{content: "";width: 170px;border-bottom:  1px solid grey;margin: 0 15px;}
+.section-title::after{content: "";width: 170px;border-bottom: 1px solid grey;margin: 0 15px;}
+
+
+.grid{display: flex; padding: 0px 10%; flex-wrap: wrap; color: #444; line-height:1.6; text-align: center;}
+.grid__column{width: 33.3%; padding: 10px 20px;}
+
+.card{background: white; padding: 20px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: 0.3; margin: 30px}
+.card:hover{transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.12)}
+.card-transparent{background: transparent;}
+.card--white{background: white;}
+
+
+.button{padding: 15px 20px; display: inline-block; color: white; width: 100%; text-align: center; transition: 0.3; border-radius: 6px; margin-top: 20px}
+.button:hover{background: #ffd369; color: #1e2a38; opacity: 0.85;}
