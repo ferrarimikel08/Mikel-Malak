@@ -1,6 +1,6 @@
 body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-size: medium; box-sizing: border-box;margin: 0;padding: 0;}
 *,*:before,*:after{ box-sizing: border-box;}
-body{background: whitesmoke ;}
+body{background-image: url("immagini/background1.jpeg");background-size: cover;background-repeat: no-repeat;background-position: center;background-attachment:local;}
 
 .header{
     display: flex;
@@ -45,6 +45,8 @@ body{background: whitesmoke ;}
 .card:hover{transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.12)}
 .card-transparent{background: transparent;}
 .card--white{background: white;}
+.card__img {max-width: 100%;height: auto;}
+.card__img1{max-width: 30%;height:auto; align-content: center;}
 
 
 .button{padding: 15px 20px; display: inline-block; color: white; width: 100%; text-align: center; transition: 0.3; border-radius: 6px; margin-top: 20px}
