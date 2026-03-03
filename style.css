@@ -118,6 +118,7 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
     .hero{flex-wrap: wrap;}
     .hero--left, .hero--right{flex-wrap: wrap;}
     .hero__title,.hero__subtitle,.hero__text, .section-title{width: 100%}
+    .hero__img{display: none;}
     .grid__column, .card, .box{width: 100%}
     .box{flex-wrap: wrap;}
 
