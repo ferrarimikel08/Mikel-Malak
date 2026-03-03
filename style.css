@@ -24,11 +24,20 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
     text-align: center;
     padding: 50px 40px;
 }
+
+.hero--left{
+    display: block;
+    padding: 40px 40px;
+    text-align: left;
+    pointer-events: none;
+}
+
+
 .hero__title{font-size: 40px; position: relative; margin: 0; COLOR: #32587e}
 .hero__title::after, .hero__title--dead::after{content: ""; display: block; width: 0px; height: 3px; background: #ffd369; margin: 10px auto; transition: 0.8s;}
 .hero__title:hover::after, .hero__title--dead:hover::after{width: 30%;}
 .hero__subtitle{ font-weight: 400; color: #555; padding: 0; margin: 0; }
-.hero__text{margin-top: 30px; padding: 0 20%;}
+.hero__text{margin-top: 30px; padding: 0;}
 
 .hero__title--dead{font-size: 47px; position: relative; margin: 0;color: #5c3a21;}
 .hero__text--dead{margin-top: 30px; padding: 0 20%; color: #8c6b4f;}
