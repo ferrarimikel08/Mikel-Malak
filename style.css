@@ -32,6 +32,32 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
     pointer-events: none;
 }
 
+.hero--right{
+    flex-direction: row-reverse;
+}
+
+.hero--left, .hero--right{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    pointer-events: none;
+}
+
+.hero__img{
+    max-width: 30%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    align-self:last baseline;
+    flex-shrink: 0;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .hero__title{font-size: 40px; position: relative; margin: 0; COLOR: #32587e}
 .hero__title::after, .hero__title--dead::after{content: ""; display: block; width: 0px; height: 3px; background: #ffd369; margin: 10px auto; transition: 0.8s;}
@@ -90,9 +116,11 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
     .menu{display: block; position: absolute;top: 108px; left: -100%; width: 100%;}  /*video su marchetti su come si fanno i 3 linette e appare il menu*/
     .nav__item{width: 100%}
     .hero{flex-wrap: wrap;}
+    .hero--left, .hero--right{flex-wrap: wrap;}
     .hero__title,.hero__subtitle,.hero__text, .section-title{width: 100%}
     .grid__column, .card, .box{width: 100%}
     .box{flex-wrap: wrap;}
+
 }
 
 
