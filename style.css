@@ -6,7 +6,25 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
 .header{display: flex;justify-content: space-between;align-items: center;background: #32587e;padding: 0 40px;
 }
 
-.header__logo{border: 1px, solid, red;}
+.header__logo{
+    border: 1px, solid, #32587e;
+    max-width: 100px;
+    height: auto;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
 
 .nav__list{display: flex; gap: 20px; padding:0 ; margin: 0;}
 .nav__item{display: inline-block}
@@ -99,15 +117,19 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
 .button--gold{ background:#a69b25}
 
 @media (max-width: 768px){
-    .header{padding-left: 20px; padding-right: 60px; position:relative}
-    .menu{display: block; position: absolute;top: 108px; left: -100%; width: 100%;}
-    /*video su marchetti su come si fanno i 3 linette e appare il menu*/
-    .nav__item{width: 100%}
+    .header{padding-left: 20px; padding-right: 20px; position:relative}
+    .hamburger{display: block; color: white;}
+    .menu{position: absolute; top: 60px; left: 0; right: 0; width: 100%; background: #32587e; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;}
+    .menu-toggle{display: block;}
+    details[open] .menu {max-height: 500px;}
+    .nav__list{flex-direction: column; gap: 0; padding: 10px 0;}
+    .nav__item{width: 100%; border-bottom: 1px solid #1e2a38;}
+    .nav__link{padding: 15px 20px; width: 100%; display: block;}
     .hero{flex-wrap: wrap;}
-    .hero--left, .hero--right{flex-wrap: wrap;}
-    .hero__title,.hero__subtitle,.hero__text, .section-title{width: 100%}
-    .hero__img{display: none;}.grid__column, 
-    .card, .box{width: 100%}.box{flex-wrap: wrap;}
+    .hero--left, .hero--right{display: flex; flex-direction: column; align-items: center; flex-wrap: wrap;}
+    .hero__title,.hero__subtitle,.hero__text, .section-title{pointer-events: none;width: 100%}
+    .hero__img{display: block; max-width: 100%;}
+    .grid__column, .card, .box{width: 100%}.box{flex-wrap: wrap;}
 }
 
 
