@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codici e Cifrari</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+    <header class="header">
+        <img src="" alt="logo" class="header__logo">
+
+        <nav class="menu">
+            <ul class="nav__list">
+                <li class="nav__item"> <a class="nav__link" href="../index.html">Home</a> </li>
+                <li class="nav__item"> <a class="nav__link "href="lingue/lingue-vive.html">Lingue Vive</a> </li>
+                <li class="nav__item"> <a class="nav__link"href="lingue-morte.html">Lingue Morte</a> </li>
+                <li class="nav__item"> <a class="nav__link nav__link--active" href="codici-e-cifrari.html">Codice e Cifrari</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+
+  <div class="pg-codici pg-codici--chiaro" id="pagCodici">
+
+    <div class="pg-codici__sfondo" id="sfondoMatrix"></div>
+
+    <div class="pg-codici__int-box">
+      <div class="pg-codici__int" id="int" onclick="cambiaModalita()">
+        <div class="pg-codici__int-punto"></div>
+        <div class="pg-codici__int-testo" id="labelInt">🔵 Modalità Chiaro</div>
+      </div>
+    </div>
+
+    <div class="pg-codici__tit" id="titolo"
+         onmouseenter="cifraTitolo()" onmouseleave="ripristinaTitolo()">
+      Codici e Cifrari
+    </div>
+
+    <div class="pg-codici__schede">
+
+      <a class="sch-codice" href=""> 
+        <div class="sch-codice__luc">
+          <div class="sch-codice__luc-ico sch-codice__luc-ico--chiuso">🔒</div>
+          <div class="sch-codice__luc-ico sch-codice__luc-ico--aperto">🔓</div>
+        </div>
+        <div class="sch-codice__nome">Cifrario di Cesare</div>
+        <div class="sch-codice__frase">Accedi al sistema</div>
+        <div class="sch-codice__bagliore"></div>
+    </a>
+
+      <a class="sch-codice" href="">
+        <div class="sch-codice__luc">
+          <div class="sch-codice__luc-ico sch-codice__luc-ico--chiuso">🔒</div>
+          <div class="sch-codice__luc-ico sch-codice__luc-ico--aperto">🔓</div>
+        </div>
+        <div class="sch-codice__nome">Codice Morse</div>
+        <div class="sch-codice__frase">Decodifica il segnale</div>
+        <div class="sch-codice__bagliore"></div>
+    </a>
+
+      <a class="sch-codice" href="">
+        <div class="sch-codice__luc">
+          <div class="sch-codice__luc-ico sch-codice__luc-ico--chiuso">🔒</div>
+          <div class="sch-codice__luc-ico sch-codice__luc-ico--aperto">🔓</div>
+        </div>
+        <div class="sch-codice__nome">Cifrario di Vigenère</div>
+        <div class="sch-codice__frase">Sblocca il segreto</div>
+        <div class="sch-codice__bagliore"></div>
+    </a>
+
+    </div>
+  </div>
+
+  <script>
+    // Configurazione Caratteri Matrix
+    const CARATTERI = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&";
+    const sfondo = document.getElementById("sfondoMatrix");
+
+    for (let i = 0; i < 35; i++) {
+      let d = document.createElement("div");
+      d.className = "pg-codici__sfondo-car";
+      d.textContent = CARATTERI[Math.floor(Math.random() * CARATTERI.length)];
+      d.style.left = (Math.random() * 100) + "%";
+      d.style.animationDuration = (5 + Math.random() * 10) + "s";
+      d.style.animationDelay = (Math.random() * 5) + "s";
+      d.style.opacity = 0.05 + Math.random() * 0.1;
+      sfondo.appendChild(d);
+    }
+
+    // Gestione Modalità (Chiaro/Segreto)
+    let modoSegreto = false;
+    const pag = document.getElementById("pagCodici");
+    const label = document.getElementById("labelInt");
+
+    function cambiaModalita() {
+      modoSegreto = !modoSegreto;
+      if (modoSegreto) {
+        pag.className = "pg-codici pg-codici--segreto";
+        label.textContent = "🔴 Modalità Segreta";
+      } else {
+        pag.className = "pg-codici pg-codici--chiaro";
+        label.textContent = "🔵 Modalità Chiaro";
+      }
+    }
+
+    // Logica Cifrario di Cesare (Spostamento 3)
+    function cifraCesare(testo) {
+      return testo.split("").map(ch => {
+        let c = ch.charCodeAt(0);
+        if (c >= 65 && c <= 90) return String.fromCharCode(((c - 65 + 3) % 26) + 65);
+        if (c >= 97 && c <= 122) return String.fromCharCode(((c - 97 + 3) % 26) + 97);
+        return ch;
+      }).join("");
+    }
+
+    const TITOLO_NORMALE = "Codici e Cifrari";
+    const TITOLO_CIFRATO = cifraCesare(TITOLO_NORMALE);
+
+    function cifraTitolo() { document.getElementById("titolo").textContent = TITOLO_CIFRATO; }
+    function ripristinaTitolo() { document.getElementById("titolo").textContent = TITOLO_NORMALE; }
+  </script>
+</body>
+</html>
