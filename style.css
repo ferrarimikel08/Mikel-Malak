@@ -6,7 +6,26 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
 .header{display: flex;justify-content: space-between;align-items: center;background: #32587e;padding: 0 40px;
 }
 
-.header__logo{border: 1px, solid, red;}
+.header__logo{
+    border: 1px, solid, #32587e;
+    max-width: 100px;
+    height: auto;
+}
+
+.menu{display: flex;}
+
+.hamburger{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.hamburger:hover{ color: #ffd369;}
+
 
 .nav__list{display: flex; gap: 20px; padding:0 ; margin: 0;}
 .nav__item{display: inline-block}
@@ -17,7 +36,7 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
 .hero{display: block;text-align: center;padding: 50px 40px;}
 .hero--left{display: block;padding: 40px 40px;text-align: left;pointer-events: none;}
 .hero--right{flex-direction: row-reverse;}
-.hero--left, .hero--right{display: flex;align-items: flex-start;gap: 20px;padding: 40px;pointer-events: none;
+.hero--left, .hero--right{display: flex;align-items: flex-start;gap: 20px;padding: 40px;
 }
 
 .hero__img{max-width: 30%;max-height: 100%;height: auto;width: auto;align-self:last baseline;flex-shrink: 0;}
@@ -92,15 +111,75 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
 .button--gold{ background:#a69b25}
 
 @media (max-width: 768px){
-    .header{padding-left: 20px; padding-right: 60px; position:relative}
-    .menu{display: block; position: absolute;top: 108px; left: -100%; width: 100%;}
-    /*video su marchetti su come si fanno i 3 linette e appare il menu*/
-    .nav__item{width: 100%}
-    .hero{flex-wrap: wrap;}
-    .hero--left, .hero--right{flex-wrap: wrap;}
-    .hero__title,.hero__subtitle,.hero__text, .section-title{width: 100%}
-    .hero__img{display: none;}.grid__column, 
-    .card, .box{width: 100%}.box{flex-wrap: wrap;}
+    .header{flex-wrap:wrap;padding:10px 20px;}
+    .header__logo{max-width:80px;}
+
+    /* HAMBURGER */
+
+    .menu{display:inline-block;}
+    .hamburger{display:flex;font-size:1.8rem;cursor: pointer;padding:10px 0;justify-content: flex-end;}
+    .hamburger::-webkit-details-marker{display:none;}
+
+    /* MENU */
+
+    .menu{width:100%;}
+    .nav__list{flex-direction:column;width:100%;}
+    .nav__item{width:100%;border-bottom:1px solid rgba(255,255,255,0.2);}
+    .nav__link{display:block;width:100%;padding:15px 20px;}
+
+    /* HERO */
+
+    .hero{flex-direction:column;padding:30px 20px;}
+    .hero--left,.hero--right{flex-direction:column;align-items:center;text-align:center;padding:20px;}
+    .hero__img{max-width:80%;}
+    .hero__title{font-size:32px;}
+    .hero__text{padding:0;}
+
+    /* GRID */
+
+    .grid{flex-direction:column;padding:0 20px;}
+    .grid__column{width:100%;padding:10px 0;}
+
+    /* CARD */
+
+    .card{margin:20px 0;}
+
+    /* BOX */
+
+    .box{
+    flex-direction:column;
+    padding:20px;
+    }
+
+    /* TIMELINE */
+
+    .timeline{
+    padding:60px 20px;
+    }
+
+    .timeline__container::before{
+    left:20px;
+    }
+
+    .timeline__item{
+    width:100%;
+    padding-left:50px;
+    padding-right:20px;
+    text-align:left;
+    }
+
+    .timeline__item:nth-child(even){
+    left:0;
+    }
+
+    .timeline__item:nth-child(odd){
+    left:0;
+    text-align:left;
+    }
+
+    .timeline__item::before{
+    left:12px;
+    }
 }
 
 
