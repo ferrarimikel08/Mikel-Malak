@@ -92,7 +92,6 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
 .timeline__item:nth-child(even)::before { left: -8px; }
 .timeline__date { font-weight: bold; display: block; color: #5c3a21; }
 .timeline__info-box h1 { font-size: 22px; margin: 0 0 10px 0; color: #5c3a21; }
-.button--marrone { display: inline-block; padding: 8px 15px; background: #5c3a21; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px; }
 
 .tag__button--azzuro { background: #dbeafe; color: #1e40af; }
 .tag__button--marron
