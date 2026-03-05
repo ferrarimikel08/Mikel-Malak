@@ -51,7 +51,7 @@ body, html{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; font-
 .hero__title::after, .timeline__title::after{content: ""; display: block; width: 0px; height: 3px; background: #ffd369; margin: 10px auto; transition: 0.8s;}
 .hero__title:hover::after, .timeline__title:hover::after{width: 30%;}
 .hero__subtitle{ font-weight: 400; color: #555; padding: 0; margin: 0; }
-.hero__text{margin-top: 30px; padding: 0 20%;}
+.hero__text{margin-top: 30px; padding: 0 0%;}
 
 
 .hero__text--dead{margin-top: 30px; padding: 0 20%; color: #8c6b4f;}
