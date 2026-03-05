@@ -1,2 +1,2 @@
-# Mikel-Malak
+Questo sito si occupa di spiegare varie vie di comunicazione, tra cui le lingue vive, le lingue morte e i codici/cifrari. Nelle lingue vive potrai trovare l'Italiano, lo Spagnolo e l'Inglese. Nelle lingue morte potrai trovare il Latino, il Greco e il Sumero. Infine nei codici/cifrari protrai trovare il codice morse, il cifrario di Cesare e il cifrario di Vigenere. Potrai agilmente muoverti tra i vari compartimenti del sito attraverso il menu a tendina che trovi in alto a destra. Inoltre riducendo la schermata non dovrai temere dato che e' tutto adattivo. 
 
